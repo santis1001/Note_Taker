@@ -41,7 +41,7 @@ body {
   color: #757575;
 }
 
-.list-container .card {
+/* .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
   border-bottom-right-radius: 0;
@@ -50,7 +50,7 @@ body {
 
 .list-container {
   padding-left: 0;
-}
+} */
 
 .list-container .list-group,
 .list-container .list-group-item:first-child,
