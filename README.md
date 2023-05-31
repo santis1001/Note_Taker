@@ -84,7 +84,7 @@ module.exports = app;
 ```
 **POST**
 
-Handles the `POST` http request. This request recieves an object which contains the new note information, then its stored in a constante with `Note` type. Which then reads the `db.json` file and appends the new JSON returned from the method `toJSON()` from `Note` class that returns the contained data in a JSON format. Then the promise returns the response status.
+Handles the `POST` http request. This request recieves an object which contains the new note information, the `uuidv4()` generates an id and then its other values are stored in an object with  `Note` contructor. Which then reads the `db.json` file and appends the new JSON returned from the method `toJSON()` from `Note` class that returns the contained data in a JSON format. Then the promise returns the response status.
 ```js
 app.post('/notes', (req, res) => {
     const { Title, Content} = req.body;
@@ -123,7 +123,6 @@ app.delete('/notes/:id', (req, res) => {
     res.json('Note deleted successfully.');
 });
 ```
-
 ## ScreenShots
 
 ## Video
