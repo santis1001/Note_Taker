@@ -1,6 +1,7 @@
 # Note_Taker
 11 Challenge
 
+[Heroku app link](https://quiet-brushlands-45113.herokuapp.com/)
 ## Description
 The program is an Express app designed to handle HTTP requests and serve appropriate data based on the request. It employs various modules, each with a specific task. By utilizing different modules, the program achieves a modular and maintainable structure, allowing for easy expansion and customization.
 
@@ -124,5 +125,13 @@ app.delete('/notes/:id', (req, res) => {
 });
 ```
 ## ScreenShots
+![Index img](./assets/screenshots/mainscreen.png)
+![Emply note list img](./assets/screenshots/emptynotes.png)
+![One Entry list img](./assets/screenshots/oneentrynotes.png)
+
 
 ## Video
+![One Entry list img](./assets/video/app-functionality.gif)
+
+## App Link
+[![Heroku app link](./assets/img/main.JPG)](https://quiet-brushlands-45113.herokuapp.com/)
