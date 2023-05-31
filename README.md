@@ -70,6 +70,7 @@ app.listen(PORT, () =>
 );
 ```
 **notes.js**
+
 This module handle every request starting with `/api`. The http request that are being handle in this module are POST, GET and DELETE.
 
 import the necessary packages for the module to work. And makes the app module available to other parts of the codebase.
