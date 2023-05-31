@@ -3,7 +3,7 @@
 
 [Heroku app link](https://quiet-brushlands-45113.herokuapp.com/)
 ## Description
-The program is an Express app designed to handle HTTP requests and serve appropriate data based on the request. It employs various modules, each with a specific task. By utilizing different modules, the program achieves a modular and maintainable structure, allowing for easy expansion and customization.
+The program is an Express app designed to handle HTTP requests and serve appropriate data based on the request. It employs various modules, each with a specific task. By utilizing different modules, the program achieves to serve the web app with only the necessary assets for its functionality.
 
 ## User Story
 
