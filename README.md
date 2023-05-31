@@ -2,7 +2,7 @@
 11 Challenge
 
 ## Description
-
+The program is an Express app designed to handle HTTP requests and serve appropriate data based on the request. It employs various modules, each with a specific task. By utilizing different modules, the program achieves a modular and maintainable structure, allowing for easy expansion and customization.
 
 ## User Story
 
@@ -69,7 +69,9 @@ app.listen(PORT, () =>
 );
 ```
 **notes.js**
+This module handle every request starting with `/api`. The http request that are being handle in this module are POST, GET and DELETE.
 
+import the necessary packages for the module to work. And makes the app module available to other parts of the codebase.
 ```js
 const express = require('express');
 const Note = require('../class/note');
@@ -80,6 +82,9 @@ const app = express();
 
 module.exports = app;
 ```
+**POST**
+
+Handles the `POST` http request. This request recieves an object which contains the new note information, then its stored in a constante with `Note` type. Which then reads the `db.json` file and appends the new JSON returned from the method `toJSON()` from `Note` class that returns the contained data in a JSON format. Then the promise returns the response status.
 ```js
 app.post('/notes', (req, res) => {
     const { Title, Content} = req.body;
@@ -100,11 +105,17 @@ app.post('/notes', (req, res) => {
     }
 });
 ```
+**GET**
+
+The `GET` http request is a read only method. This responds to the request with the content of `db.json` in JSON format.
 ```js
 app.get('/notes', (req, res) =>{
     readFromFile('./lib/db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 ```
+**DELETE**
+
+`DELETE` http request sends an id at the end of the URL as a parameter. This parameter is then passed to the `deleteFromFile()` method and removes it from the `db.json` file. 
 ```js
 app.delete('/notes/:id', (req, res) => {
     const noteId = req.params.id;    
